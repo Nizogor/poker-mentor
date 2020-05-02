@@ -7,12 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D3F9A0229EF58B0C7D65B1 /* TabBarPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0CC9F9FE31FAD5DC3247EF /* TabBarPresenterDelegate.swift */; };
 		024A43E4245D712D00282C1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024A43E3245D712D00282C1F /* AppDelegate.swift */; };
 		024A43EE245D712D00282C1F /* PokerMentor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 024A43EC245D712D00282C1F /* PokerMentor.xcdatamodeld */; };
 		024A43F0245D712F00282C1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024A43EF245D712F00282C1F /* Assets.xcassets */; };
 		024A43F3245D712F00282C1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024A43F1245D712F00282C1F /* LaunchScreen.storyboard */; };
 		024A440B245D748D00282C1F /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024A4409245D748D00282C1F /* PureLayout.framework */; };
 		024A440C245D748D00282C1F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024A440A245D748D00282C1F /* Swinject.framework */; };
+		024A440F245D76ED00282C1F /* Container+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024A440E245D76ED00282C1F /* Container+Setup.swift */; };
+		024A4411245D77FC00282C1F /* DependencyContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024A4410245D77FC00282C1F /* DependencyContainerTests.swift */; };
+		024A4413245D795F00282C1F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024A440A245D748D00282C1F /* Swinject.framework */; };
+		1275FAFC88AD4CEFA958315C /* TabBarRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E17CD8341EBB5F4381B48 /* TabBarRouterProtocol.swift */; };
+		3D787BE2FA88040F0F47B6D0 /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92817CADC47E288E4690B383 /* TabBarInteractor.swift */; };
+		545661E5587199999B47F483 /* TabBarPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2580D926C5E400F0BBF69DA /* TabBarPresenterProtocol.swift */; };
+		5C8006610CB667F4DDB1F3F6 /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA21EFD9896BDB9CEC483B8 /* TabBarBuilder.swift */; };
+		641EC303433B6B290E1ED495 /* TabBarInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2FD431912679CA89F4546 /* TabBarInteractorProtocol.swift */; };
+		725E16397FE3AC49F9AE83E9 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98368E59838FE717B9D07A /* TabBarPresenter.swift */; };
+		76CBCFA54F8D42B6ECE49A8D /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2F04C985932E2B9BE2773 /* TabBarRouter.swift */; };
+		A0EA2C086AB62B74E4D5C886 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67198C72C0CA402C90E99CE2 /* TabBarViewController.swift */; };
+		FBB7C4783D185D2DC8F0504B /* TabBarInteractorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A27FB3FBF527B4D476B8B /* TabBarInteractorDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,18 @@
 		024A43FF245D712F00282C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		024A4409245D748D00282C1F /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
 		024A440A245D748D00282C1F /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		024A440E245D76ED00282C1F /* Container+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Setup.swift"; sourceTree = "<group>"; };
+		024A4410245D77FC00282C1F /* DependencyContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTests.swift; sourceTree = "<group>"; };
+		1C98368E59838FE717B9D07A /* TabBarPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		4DD2F04C985932E2B9BE2773 /* TabBarRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		67198C72C0CA402C90E99CE2 /* TabBarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7BA21EFD9896BDB9CEC483B8 /* TabBarBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
+		8BB2FD431912679CA89F4546 /* TabBarInteractorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarInteractorProtocol.swift; sourceTree = "<group>"; };
+		92817CADC47E288E4690B383 /* TabBarInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
+		AB0CC9F9FE31FAD5DC3247EF /* TabBarPresenterDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarPresenterDelegate.swift; sourceTree = "<group>"; };
+		C33A27FB3FBF527B4D476B8B /* TabBarInteractorDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarInteractorDelegate.swift; sourceTree = "<group>"; };
+		C83E17CD8341EBB5F4381B48 /* TabBarRouterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarRouterProtocol.swift; sourceTree = "<group>"; };
+		E2580D926C5E400F0BBF69DA /* TabBarPresenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarPresenterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,12 +77,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024A4413245D795F00282C1F /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007F3C4A777E1C55A6FA3F5E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8BB2FD431912679CA89F4546 /* TabBarInteractorProtocol.swift */,
+				C33A27FB3FBF527B4D476B8B /* TabBarInteractorDelegate.swift */,
+				92817CADC47E288E4690B383 /* TabBarInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		024A43D7245D712D00282C1F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +117,8 @@
 		024A43E2245D712D00282C1F /* PokerMentor */ = {
 			isa = PBXGroup;
 			children = (
+				024A440D245D76DE00282C1F /* DependencyContainer */,
+				5A457CBC812F1C9A9A7088A4 /* Screens */,
 				024A43E3245D712D00282C1F /* AppDelegate.swift */,
 				024A43EF245D712F00282C1F /* Assets.xcassets */,
 				024A43F1245D712F00282C1F /* LaunchScreen.storyboard */,
@@ -93,9 +131,74 @@
 		024A43FC245D712F00282C1F /* PokerMentorTests */ = {
 			isa = PBXGroup;
 			children = (
+				024A4410245D77FC00282C1F /* DependencyContainerTests.swift */,
 				024A43FF245D712F00282C1F /* Info.plist */,
 			);
 			path = PokerMentorTests;
+			sourceTree = "<group>";
+		};
+		024A440D245D76DE00282C1F /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				024A440E245D76ED00282C1F /* Container+Setup.swift */,
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
+		094C1E77C4400879D00A879B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E2580D926C5E400F0BBF69DA /* TabBarPresenterProtocol.swift */,
+				AB0CC9F9FE31FAD5DC3247EF /* TabBarPresenterDelegate.swift */,
+				1C98368E59838FE717B9D07A /* TabBarPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0DFDD37B3CF30098B6F0F5C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67198C72C0CA402C90E99CE2 /* TabBarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A457CBC812F1C9A9A7088A4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				85EC8EC3724FED5238863D00 /* TabBar */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		85EC8EC3724FED5238863D00 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0DFDD37B3CF30098B6F0F5C9 /* View */,
+				007F3C4A777E1C55A6FA3F5E /* Interactor */,
+				094C1E77C4400879D00A879B /* Presenter */,
+				B31A6DEEDA6C9DF449ED9FBF /* Router */,
+				C40583E20E507A157B7FAC03 /* Builder */,
+			);
+			name = TabBar;
+			path = PokerMentor/TabBar;
+			sourceTree = SOURCE_ROOT;
+		};
+		B31A6DEEDA6C9DF449ED9FBF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C83E17CD8341EBB5F4381B48 /* TabBarRouterProtocol.swift */,
+				4DD2F04C985932E2B9BE2773 /* TabBarRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C40583E20E507A157B7FAC03 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				7BA21EFD9896BDB9CEC483B8 /* TabBarBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +254,7 @@
 					};
 					024A43F8245D712F00282C1F = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 024A43DF245D712D00282C1F;
 					};
 				};
@@ -223,7 +327,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				024A43E4245D712D00282C1F /* AppDelegate.swift in Sources */,
+				024A440F245D76ED00282C1F /* Container+Setup.swift in Sources */,
 				024A43EE245D712D00282C1F /* PokerMentor.xcdatamodeld in Sources */,
+				A0EA2C086AB62B74E4D5C886 /* TabBarViewController.swift in Sources */,
+				641EC303433B6B290E1ED495 /* TabBarInteractorProtocol.swift in Sources */,
+				FBB7C4783D185D2DC8F0504B /* TabBarInteractorDelegate.swift in Sources */,
+				3D787BE2FA88040F0F47B6D0 /* TabBarInteractor.swift in Sources */,
+				545661E5587199999B47F483 /* TabBarPresenterProtocol.swift in Sources */,
+				00D3F9A0229EF58B0C7D65B1 /* TabBarPresenterDelegate.swift in Sources */,
+				725E16397FE3AC49F9AE83E9 /* TabBarPresenter.swift in Sources */,
+				1275FAFC88AD4CEFA958315C /* TabBarRouterProtocol.swift in Sources */,
+				76CBCFA54F8D42B6ECE49A8D /* TabBarRouter.swift in Sources */,
+				5C8006610CB667F4DDB1F3F6 /* TabBarBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024A4411245D77FC00282C1F /* DependencyContainerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +535,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PokerMentorTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -429,6 +550,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.PokerMentor.PokerMentorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokerMentor.app/PokerMentor";
@@ -440,7 +562,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PokerMentorTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
