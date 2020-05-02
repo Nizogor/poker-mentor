@@ -7,14 +7,25 @@
 //
 
 import UIKit
+import Swinject
 
 class TabBarBuilder {
+
+	// MARK: - Private Properties
+
+	private let dependencyContainer: Container
+
+	init(dependencyContainer: Container) {
+		self.dependencyContainer = dependencyContainer
+	}
 
     // MARK: - Methods
     
     func buildModule() -> UIViewController {
+		let sessionBuilder = dependencyContainer.resolve(SessionBuilder.self)!
+
         let interactor = TabBarInteractor()
-        let router = TabBarRouter()
+		let router = TabBarRouter(sessionBuilder: sessionBuilder)
 
         let presenter = TabBarPresenter(interactor: interactor, router: router)
         let viewController = TabBarViewController(presenter: presenter)

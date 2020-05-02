@@ -18,13 +18,23 @@
 		024A4411245D77FC00282C1F /* DependencyContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024A4410245D77FC00282C1F /* DependencyContainerTests.swift */; };
 		024A4413245D795F00282C1F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024A440A245D748D00282C1F /* Swinject.framework */; };
 		1275FAFC88AD4CEFA958315C /* TabBarRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E17CD8341EBB5F4381B48 /* TabBarRouterProtocol.swift */; };
+		2074EDC935F0DBD1A3908368 /* SessionInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5ECE19C41A379DBC1B98CE /* SessionInteractorProtocol.swift */; };
+		25389787566FA4F76940D909 /* SessionInteractorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4288138F4EBD6C4CCB4CBF /* SessionInteractorDelegate.swift */; };
+		2945D8727ACF1D62B76F1BA4 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0244929ADE81D99E9EE7D0AF /* SessionViewController.swift */; };
 		3D787BE2FA88040F0F47B6D0 /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92817CADC47E288E4690B383 /* TabBarInteractor.swift */; };
 		545661E5587199999B47F483 /* TabBarPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2580D926C5E400F0BBF69DA /* TabBarPresenterProtocol.swift */; };
 		5C8006610CB667F4DDB1F3F6 /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA21EFD9896BDB9CEC483B8 /* TabBarBuilder.swift */; };
 		641EC303433B6B290E1ED495 /* TabBarInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2FD431912679CA89F4546 /* TabBarInteractorProtocol.swift */; };
 		725E16397FE3AC49F9AE83E9 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C98368E59838FE717B9D07A /* TabBarPresenter.swift */; };
 		76CBCFA54F8D42B6ECE49A8D /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2F04C985932E2B9BE2773 /* TabBarRouter.swift */; };
+		87F2B7A62874DA7F1C639983 /* SessionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A734EAD4634D7D973EB667 /* SessionRouter.swift */; };
+		8C418F1CFA934EF2BA72D91D /* SessionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46926B037524C6088B72820C /* SessionPresenter.swift */; };
+		9E2E39277C872A6D95C1DB9D /* SessionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5525D9314EAF9A1F2DE4CF8 /* SessionBuilder.swift */; };
 		A0EA2C086AB62B74E4D5C886 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67198C72C0CA402C90E99CE2 /* TabBarViewController.swift */; };
+		B490859794F95D4D1030864D /* SessionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF41899F10118A249F9CCE8 /* SessionInteractor.swift */; };
+		C3F37DAB11F843A0C7B73017 /* SessionPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21E0F7135C44A408AFAA4D4 /* SessionPresenterDelegate.swift */; };
+		F040CA09E06228BB90E33A64 /* SessionPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85E99E2DAB0CE340C3260C /* SessionPresenterProtocol.swift */; };
+		F5AB18EC7B570DF50436BDC7 /* SessionRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE501179C33E2060F4751203 /* SessionRouterProtocol.swift */; };
 		FBB7C4783D185D2DC8F0504B /* TabBarInteractorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A27FB3FBF527B4D476B8B /* TabBarInteractorDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0244929ADE81D99E9EE7D0AF /* SessionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		024A43E0245D712D00282C1F /* PokerMentor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerMentor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		024A43E3245D712D00282C1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		024A43ED245D712D00282C1F /* PokerMentor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PokerMentor.xcdatamodel; sourceTree = "<group>"; };
@@ -52,15 +63,24 @@
 		024A440E245D76ED00282C1F /* Container+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Setup.swift"; sourceTree = "<group>"; };
 		024A4410245D77FC00282C1F /* DependencyContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTests.swift; sourceTree = "<group>"; };
 		1C98368E59838FE717B9D07A /* TabBarPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		3F85E99E2DAB0CE340C3260C /* SessionPresenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionPresenterProtocol.swift; sourceTree = "<group>"; };
+		46926B037524C6088B72820C /* SessionPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionPresenter.swift; sourceTree = "<group>"; };
 		4DD2F04C985932E2B9BE2773 /* TabBarRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		67198C72C0CA402C90E99CE2 /* TabBarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6F5ECE19C41A379DBC1B98CE /* SessionInteractorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionInteractorProtocol.swift; sourceTree = "<group>"; };
 		7BA21EFD9896BDB9CEC483B8 /* TabBarBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
 		8BB2FD431912679CA89F4546 /* TabBarInteractorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarInteractorProtocol.swift; sourceTree = "<group>"; };
 		92817CADC47E288E4690B383 /* TabBarInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
+		9EF41899F10118A249F9CCE8 /* SessionInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionInteractor.swift; sourceTree = "<group>"; };
 		AB0CC9F9FE31FAD5DC3247EF /* TabBarPresenterDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarPresenterDelegate.swift; sourceTree = "<group>"; };
 		C33A27FB3FBF527B4D476B8B /* TabBarInteractorDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarInteractorDelegate.swift; sourceTree = "<group>"; };
 		C83E17CD8341EBB5F4381B48 /* TabBarRouterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarRouterProtocol.swift; sourceTree = "<group>"; };
+		E0A734EAD4634D7D973EB667 /* SessionRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionRouter.swift; sourceTree = "<group>"; };
+		E21E0F7135C44A408AFAA4D4 /* SessionPresenterDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionPresenterDelegate.swift; sourceTree = "<group>"; };
 		E2580D926C5E400F0BBF69DA /* TabBarPresenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarPresenterProtocol.swift; sourceTree = "<group>"; };
+		F5525D9314EAF9A1F2DE4CF8 /* SessionBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionBuilder.swift; sourceTree = "<group>"; };
+		FE501179C33E2060F4751203 /* SessionRouterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionRouterProtocol.swift; sourceTree = "<group>"; };
+		FF4288138F4EBD6C4CCB4CBF /* SessionInteractorDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionInteractorDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +175,16 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		0AA2B6F67B22D94359BBDFC2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6F5ECE19C41A379DBC1B98CE /* SessionInteractorProtocol.swift */,
+				FF4288138F4EBD6C4CCB4CBF /* SessionInteractorDelegate.swift */,
+				9EF41899F10118A249F9CCE8 /* SessionInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		0DFDD37B3CF30098B6F0F5C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,9 +193,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		17F5BFB2FC3EB2D87E3EED14 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FE501179C33E2060F4751203 /* SessionRouterProtocol.swift */,
+				E0A734EAD4634D7D973EB667 /* SessionRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		5A457CBC812F1C9A9A7088A4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BC77C91E754E616991418DBC /* Session */,
 				85EC8EC3724FED5238863D00 /* TabBar */,
 			);
 			path = Screens;
@@ -193,12 +233,51 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		BB80AF9D38E30B4A4B3070D7 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				F5525D9314EAF9A1F2DE4CF8 /* SessionBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		BC77C91E754E616991418DBC /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				DCC36231F834BD55DA3DFA2C /* View */,
+				0AA2B6F67B22D94359BBDFC2 /* Interactor */,
+				EEFC825FCE647CC5F44C3B23 /* Presenter */,
+				17F5BFB2FC3EB2D87E3EED14 /* Router */,
+				BB80AF9D38E30B4A4B3070D7 /* Builder */,
+			);
+			name = Session;
+			path = PokerMentor/Session;
+			sourceTree = SOURCE_ROOT;
+		};
 		C40583E20E507A157B7FAC03 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
 				7BA21EFD9896BDB9CEC483B8 /* TabBarBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		DCC36231F834BD55DA3DFA2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0244929ADE81D99E9EE7D0AF /* SessionViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEFC825FCE647CC5F44C3B23 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3F85E99E2DAB0CE340C3260C /* SessionPresenterProtocol.swift */,
+				E21E0F7135C44A408AFAA4D4 /* SessionPresenterDelegate.swift */,
+				46926B037524C6088B72820C /* SessionPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +418,16 @@
 				1275FAFC88AD4CEFA958315C /* TabBarRouterProtocol.swift in Sources */,
 				76CBCFA54F8D42B6ECE49A8D /* TabBarRouter.swift in Sources */,
 				5C8006610CB667F4DDB1F3F6 /* TabBarBuilder.swift in Sources */,
+				2945D8727ACF1D62B76F1BA4 /* SessionViewController.swift in Sources */,
+				2074EDC935F0DBD1A3908368 /* SessionInteractorProtocol.swift in Sources */,
+				25389787566FA4F76940D909 /* SessionInteractorDelegate.swift in Sources */,
+				B490859794F95D4D1030864D /* SessionInteractor.swift in Sources */,
+				F040CA09E06228BB90E33A64 /* SessionPresenterProtocol.swift in Sources */,
+				C3F37DAB11F843A0C7B73017 /* SessionPresenterDelegate.swift in Sources */,
+				8C418F1CFA934EF2BA72D91D /* SessionPresenter.swift in Sources */,
+				F5AB18EC7B570DF50436BDC7 /* SessionRouterProtocol.swift in Sources */,
+				87F2B7A62874DA7F1C639983 /* SessionRouter.swift in Sources */,
+				9E2E39277C872A6D95C1DB9D /* SessionBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

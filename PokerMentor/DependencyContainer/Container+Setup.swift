@@ -9,8 +9,12 @@ import Swinject
 
 extension Container {
 	func setup() {
+		register(SessionBuilder.self) { _ in
+			SessionBuilder()
+		}
+
 		register(TabBarBuilder.self) { _ in
-			TabBarBuilder()
+			TabBarBuilder(dependencyContainer: self)
 		}
 	}
 }
