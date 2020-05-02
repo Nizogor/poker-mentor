@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	// MARK: - Properties
 
-	var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
+	lazy var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
 
 	// MARK: - Private Properties
 
