@@ -13,6 +13,10 @@ extension Container {
 			SessionBuilder()
 		}
 
+		register(SettingsBuilder.self) { _ in
+			SettingsBuilder()
+		}
+
 		register(TabBarBuilder.self) { _ in
 			TabBarBuilder(dependencyContainer: self)
 		}

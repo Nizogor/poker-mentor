@@ -19,19 +19,23 @@ class TabBarRouter {
 	// MARK: - Private Properties
 
 	private let sessionBuilder: SessionBuilder
+	private let settingsBuilder: SettingsBuilder
 
 	// MARK: - Construction
 
-	init(sessionBuilder: SessionBuilder) {
+	init(sessionBuilder: SessionBuilder, settingsBuilder: SettingsBuilder) {
 		self.sessionBuilder = sessionBuilder
+		self.settingsBuilder = settingsBuilder
 	}
 
 	// MARK: - Private Methods
 
 	private func setupViewControllers() {
 		let sessionViewController = sessionBuilder.buildModule()
+		let settingsViewController = settingsBuilder.buildModule()
+		let settingsNavigationController = UINavigationController(rootViewController: settingsViewController)
 
-		viewController?.setViewControllers([sessionViewController], animated: false)
+		viewController?.setViewControllers([sessionViewController, settingsNavigationController], animated: false)
 	}
 }
 

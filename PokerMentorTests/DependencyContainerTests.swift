@@ -28,6 +28,7 @@ class DependencyContainerTests: XCTestCase {
 
 	func testContainer() {
 		XCTAssertNotNil(dependencyContainer.resolve(SessionBuilder.self))
+		XCTAssertNotNil(dependencyContainer.resolve(SettingsBuilder.self))
 		XCTAssertNotNil(dependencyContainer.resolve(TabBarBuilder.self))
 	}
 }

@@ -23,9 +23,10 @@ class TabBarBuilder {
     
     func buildModule() -> UIViewController {
 		let sessionBuilder = dependencyContainer.resolve(SessionBuilder.self)!
+		let settingsBuilder = dependencyContainer.resolve(SettingsBuilder.self)!
 
         let interactor = TabBarInteractor()
-		let router = TabBarRouter(sessionBuilder: sessionBuilder)
+		let router = TabBarRouter(sessionBuilder: sessionBuilder, settingsBuilder: settingsBuilder)
 
         let presenter = TabBarPresenter(interactor: interactor, router: router)
         let viewController = TabBarViewController(presenter: presenter)
