@@ -11,6 +11,8 @@
 		024A43EE245D712D00282C1F /* PokerMentor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 024A43EC245D712D00282C1F /* PokerMentor.xcdatamodeld */; };
 		024A43F0245D712F00282C1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024A43EF245D712F00282C1F /* Assets.xcassets */; };
 		024A43F3245D712F00282C1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024A43F1245D712F00282C1F /* LaunchScreen.storyboard */; };
+		024A440B245D748D00282C1F /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024A4409245D748D00282C1F /* PureLayout.framework */; };
+		024A440C245D748D00282C1F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024A440A245D748D00282C1F /* Swinject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		024A43F4245D712F00282C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		024A43F9245D712F00282C1F /* PokerMentorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerMentorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		024A43FF245D712F00282C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		024A4409245D748D00282C1F /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
+		024A440A245D748D00282C1F /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024A440B245D748D00282C1F /* PureLayout.framework in Frameworks */,
+				024A440C245D748D00282C1F /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,8 @@
 				024A43E2245D712D00282C1F /* PokerMentor */,
 				024A43FC245D712F00282C1F /* PokerMentorTests */,
 				024A43E1245D712D00282C1F /* Products */,
+				024A4409245D748D00282C1F /* PureLayout.framework */,
+				024A440A245D748D00282C1F /* Swinject.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +108,7 @@
 				024A43DC245D712D00282C1F /* Sources */,
 				024A43DD245D712D00282C1F /* Frameworks */,
 				024A43DE245D712D00282C1F /* Resources */,
+				024A4408245D735300282C1F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -183,6 +192,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		024A4408245D735300282C1F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/PureLayout.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PureLayout.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		024A43DC245D712D00282C1F /* Sources */ = {
@@ -342,6 +375,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PokerMentor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,6 +397,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PokerMentor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
