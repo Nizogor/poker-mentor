@@ -1,5 +1,5 @@
 //
-//  SessionSessionViewController.swift
+//  SessionViewController.swift
 //  PokerMentor
 //
 //  Created by Nikita Teplyakov on 02/05/2020.
@@ -18,9 +18,6 @@ class SessionViewController: UIViewController {
 
     private let presenter: SessionPresenterProtocol
 
-	private let tabImageDark = #imageLiteral(resourceName: "coin_black")
-	private let tabImageLight = #imageLiteral(resourceName: "coin_white")
-
     // MARK: - Construction
 
     required init(presenter: SessionPresenterProtocol) {
@@ -35,12 +32,12 @@ class SessionViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-	// MARK: - Methods
+	// MARK: - View Life Cycle
 
-	override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-		super.traitCollectionDidChange(previousTraitCollection)
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 
-		updateAppearance()
+		navigationController?.setNavigationBarHidden(true, animated: false)
 	}
 
 	// MARK: - Private Methods
@@ -49,7 +46,6 @@ class SessionViewController: UIViewController {
 		setupTabBarItem()
 		setupStartButton()
 		setupGoodLuckLabel()
-		updateAppearance()
 	}
 
 	private func setupStartButton() {
@@ -59,9 +55,12 @@ class SessionViewController: UIViewController {
 		startButton.autoPinEdge(toSuperviewMargin: .bottom, withInset: 30)
 		startButton.setContentHuggingPriority(.required, for: .vertical)
 		startButton.setTitle("Start", for: .normal)
+		startButton.setTitleColor(UIColor.whiteBlack, for: .normal)
 		startButton.setTitleColor(.gray, for: .highlighted)
 		startButton.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .medium)
 		startButton.layer.cornerRadius = 6
+		startButton.addTarget(self, action: #selector(startButtonTap), for: .touchUpInside)
+		startButton.backgroundColor = UIColor.blackWhite
 	}
 
 	private func setupGoodLuckLabel() {
@@ -71,30 +70,17 @@ class SessionViewController: UIViewController {
 		goodLuckLabel.text = "Good Luck!"
 		goodLuckLabel.textAlignment = .center
 		goodLuckLabel.font = UIFont.systemFont(ofSize: 24, weight: .medium)
+		goodLuckLabel.textColor = UIColor.blackWhite
 	}
 
 	private func setupTabBarItem() {
-		tabBarItem.title = "Session"
-		tabBarItem.image = #imageLiteral(resourceName: "coin_gray")
+		tabBarItem = UITabBarItem(title: "Session", image: #imageLiteral(resourceName: "coin_gray"), selectedImage: #imageLiteral(resourceName: "coin"))
 	}
 
-	private func updateAppearance() {
-		switch traitCollection.userInterfaceStyle {
-		case .dark:
-			startButton.backgroundColor = .white
-			startButton.setTitleColor(.black, for: .normal)
+	// MARK: - Actions
 
-			goodLuckLabel.textColor = .white
-
-			tabBarItem.selectedImage = tabImageLight
-		default:
-			startButton.backgroundColor = .black
-			startButton.setTitleColor(.white, for: .normal)
-
-			goodLuckLabel.textColor = .black
-
-			tabBarItem.selectedImage = tabImageDark
-		}
+	@objc private func startButtonTap() {
+		presenter.startButtonTap()
 	}
 }
 

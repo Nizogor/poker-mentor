@@ -1,5 +1,5 @@
 //
-//  SessionSessionBuilder.swift
+//  SessionBuilder.swift
 //  PokerMentor
 //
 //  Created by Nikita Teplyakov on 02/05/2020.
@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import Swinject
 
 class SessionBuilder {
+
+	// MARK: - Private Properties
+
+	private let dependencyContainer: Container
+
+	// MARK: - Construction
+
+	init(dependencyContainer: Container) {
+		self.dependencyContainer = dependencyContainer
+	}
 
     // MARK: - Methods
     
     func buildModule() -> UIViewController {
+		let pickCardBuilder = dependencyContainer.resolve(PickCardBuilder.self)!
+
         let interactor = SessionInteractor()
-        let router = SessionRouter()
+        let router = SessionRouter(pickCardBuilder: pickCardBuilder)
 
         let presenter = SessionPresenter(interactor: interactor, router: router)
         let viewController = SessionViewController(presenter: presenter)

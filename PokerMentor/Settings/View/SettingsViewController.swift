@@ -1,5 +1,5 @@
 //
-//  SettingsSettingsViewController.swift
+//  SettingsViewController.swift
 //  PokerMentor
 //
 //  Created by Nikita Teplyakov on 03/05/2020.
@@ -16,9 +16,6 @@ class SettingsViewController: UIViewController {
 
     private let presenter: SettingsPresenterProtocol
 
-	private let tabImageDark = #imageLiteral(resourceName: "gear_black")
-	private let tabImageLight = #imageLiteral(resourceName: "gear_white")
-
     // MARK: - Construction
 
     required init(presenter: SettingsPresenterProtocol) {
@@ -33,20 +30,11 @@ class SettingsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-	// MARK: - Methods
-
-	override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-		super.traitCollectionDidChange(previousTraitCollection)
-
-		updateAppearance()
-	}
-
 	// MARK: - Private Methods
 
 	private func setup() {
 		setupNavigationItem()
 		setupTabBarItem()
-		updateAppearance()
 	}
 
 	private func setupNavigationItem() {
@@ -54,17 +42,7 @@ class SettingsViewController: UIViewController {
 	}
 
 	private func setupTabBarItem() {
-		tabBarItem.title = screenName
-		tabBarItem.image = #imageLiteral(resourceName: "gear_gray")
-	}
-
-	private func updateAppearance() {
-		switch traitCollection.userInterfaceStyle {
-		case .dark:
-			tabBarItem.selectedImage = tabImageLight
-		default:
-			tabBarItem.selectedImage = tabImageDark
-		}
+		tabBarItem = UITabBarItem(title: screenName, image: #imageLiteral(resourceName: "gear_gray"), selectedImage: #imageLiteral(resourceName: "gear"))
 	}
 }
 

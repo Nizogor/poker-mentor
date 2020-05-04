@@ -1,5 +1,5 @@
 //
-//  TabBarTabBarViewController.swift
+//  TabBarViewController.swift
 //  PokerMentor
 //
 //  Created by Nikita Teplyakov on 02/05/2020.
@@ -34,27 +34,19 @@ class TabBarViewController: UITabBarController {
 		setup()
     }
 
-	// MARK: - Methods
-
-	override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-		updateAppearance()
-	}
-
 	// MARK: - Private Methods
 
 	private func setup() {
-		updateAppearance()
+		setupView()
+		setupTabBar()
 	}
 
-	private func updateAppearance() {
-		switch traitCollection.userInterfaceStyle {
-		case .dark:
-			tabBar.tintColor = .white
-			view.backgroundColor = .black
-		default:
-			tabBar.tintColor = .black
-			view.backgroundColor = .white
-		}
+	private func setupView() {
+		tabBar.tintColor = UIColor.blackWhite
+	}
+
+	private func setupTabBar() {
+		view.backgroundColor = UIColor.whiteBlack
 	}
 }
 

@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import PokerMentor
+import PokerMentorKit
 import Swinject
 
 class DependencyContainerTests: XCTestCase {
@@ -27,6 +28,8 @@ class DependencyContainerTests: XCTestCase {
 	}
 
 	func testContainer() {
+		XCTAssertNotNil(dependencyContainer.resolve(DeckProviderProtocol.self))
+		XCTAssertNotNil(dependencyContainer.resolve(PickCardBuilder.self))
 		XCTAssertNotNil(dependencyContainer.resolve(SessionBuilder.self))
 		XCTAssertNotNil(dependencyContainer.resolve(SettingsBuilder.self))
 		XCTAssertNotNil(dependencyContainer.resolve(TabBarBuilder.self))

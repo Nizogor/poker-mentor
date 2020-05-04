@@ -1,5 +1,5 @@
 //
-//  SessionSessionPresenterDelegate.swift
+//  SessionPresenterDelegate.swift
 //  PokerMentor
 //
 //  Created by Nikita Teplyakov on 02/05/2020.

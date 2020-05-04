@@ -1,5 +1,5 @@
 //
-//  SessionSessionPresenter.swift
+//  SessionPresenter.swift
 //  PokerMentor
 //
 //  Created by Nikita Teplyakov on 02/05/2020.
@@ -26,7 +26,9 @@ class SessionPresenter {
 // MARK: - SessionPresenterProtocol
 
 extension SessionPresenter: SessionPresenterProtocol {
-
+	func startButtonTap() {
+		router.showPickCard()
+	}
 }
 
 // MARK: - SessionInteractorDelegate

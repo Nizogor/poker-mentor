@@ -1,5 +1,5 @@
 //
-//  SettingsSettingsPresenter.swift
+//  SettingsPresenter.swift
 //  PokerMentor
 //
 //  Created by Nikita Teplyakov on 03/05/2020.

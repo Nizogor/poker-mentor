@@ -1,5 +1,5 @@
 //
-//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.file_name }}
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
@@ -12,8 +12,8 @@ class {{ module_info.name }}Presenter {
     
     weak var delegate: {{ module_info.name }}PresenterDelegate?
 
-    let interactor: {{ module_info.name }}InteractorProtocol
-    let router: {{ module_info.name }}RouterProtocol
+    private let interactor: {{ module_info.name }}InteractorProtocol
+    private let router: {{ module_info.name }}RouterProtocol
 
     // MARK: - Construction
 

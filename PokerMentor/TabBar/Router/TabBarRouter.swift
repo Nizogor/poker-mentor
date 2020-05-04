@@ -1,5 +1,5 @@
 //
-//  TabBarTabBarRouter.swift
+//  TabBarRouter.swift
 //  PokerMentor
 //
 //  Created by Nikita Teplyakov on 02/05/2020.
@@ -32,10 +32,13 @@ class TabBarRouter {
 
 	private func setupViewControllers() {
 		let sessionViewController = sessionBuilder.buildModule()
+		let sessionNavigationController = UINavigationController(rootViewController: sessionViewController)
+
 		let settingsViewController = settingsBuilder.buildModule()
 		let settingsNavigationController = UINavigationController(rootViewController: settingsViewController)
 
-		viewController?.setViewControllers([sessionViewController, settingsNavigationController], animated: false)
+		viewController?.setViewControllers([sessionNavigationController, settingsNavigationController],
+										   animated: false)
 	}
 }
 

@@ -1,0 +1,25 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "coin.pdf"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "coin-1.pdf",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
+  }
+}
