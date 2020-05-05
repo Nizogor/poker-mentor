@@ -142,32 +142,8 @@ class CardView: UIView {
 
 	private func updateRank() {
 		switch rank {
-		case .ace:
-			rankLabel.text = "A"
-		case .king:
-			rankLabel.text = "K"
-		case .queen:
-			rankLabel.text = "Q"
-		case .jack:
-			rankLabel.text = "J"
-		case .ten:
-			rankLabel.text = "10"
-		case .nine:
-			rankLabel.text = "9"
-		case .eight:
-			rankLabel.text = "8"
-		case .seven:
-			rankLabel.text = "7"
-		case .six:
-			rankLabel.text = "6"
-		case .five:
-			rankLabel.text = "5"
-		case .four:
-			rankLabel.text = "4"
-		case .three:
-			rankLabel.text = "3"
-		case .two:
-			rankLabel.text = "2"
+		case .some(let rank):
+			rankLabel.text = rank.description
 		case .none:
 			rankLabel.text = symbolForSuit()
 		}
@@ -175,14 +151,8 @@ class CardView: UIView {
 
 	private func symbolForSuit() -> String? {
 		switch suit {
-		case .hearts:
-			return "♥"
-		case .diamonds:
-			return "♦"
-		case .clubs:
-			return "♣"
-		case .spades:
-			return "♠"
+		case .some(let value):
+			return value.description
 		case .none:
 			return nil
 		}

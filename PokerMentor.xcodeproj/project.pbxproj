@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00D3F9A0229EF58B0C7D65B1 /* TabBarPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0CC9F9FE31FAD5DC3247EF /* TabBarPresenterDelegate.swift */; };
+		0233127A246046DB00A27971 /* PreFlopStrategyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02331279246046DB00A27971 /* PreFlopStrategyService.swift */; };
+		0233127C2460472400A27971 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233127B2460472400A27971 /* ActionType.swift */; };
+		0233127E246047A400A27971 /* PositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233127D246047A400A27971 /* PositionType.swift */; };
+		023312832460B27300A27971 /* PreFlopHandType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023312822460B27300A27971 /* PreFlopHandType.swift */; };
+		023312852460C20400A27971 /* PreFlopHandRecognizeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023312842460C20400A27971 /* PreFlopHandRecognizeService.swift */; };
+		0233128B2460C74300A27971 /* PreFlopHandRecognizeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233128A2460C74300A27971 /* PreFlopHandRecognizeServiceProtocol.swift */; };
 		024A43E4245D712D00282C1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024A43E3245D712D00282C1F /* AppDelegate.swift */; };
 		024A43EE245D712D00282C1F /* PokerMentor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 024A43EC245D712D00282C1F /* PokerMentor.xcdatamodeld */; };
 		024A43F0245D712F00282C1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024A43EF245D712F00282C1F /* Assets.xcassets */; };
@@ -34,6 +40,11 @@
 		024A4459245F35E100282C1F /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024A4458245F35E100282C1F /* CardCollectionViewCell.swift */; };
 		024A445C245F3C4200282C1F /* UICollectionViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024A445B245F3C4200282C1F /* UICollectionViewCell+ReuseIdentifier.swift */; };
 		024A445F245F3DFD00282C1F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024A445E245F3DFD00282C1F /* CardView.swift */; };
+		028E107E2461771000F0E3A6 /* PreFlopStrategyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E107D2461771000F0E3A6 /* PreFlopStrategyServiceTests.swift */; };
+		028E10802461772D00F0E3A6 /* PreFlopHandRecognizeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E107F2461772D00F0E3A6 /* PreFlopHandRecognizeServiceTests.swift */; };
+		028E10832461BCE000F0E3A6 /* HandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E10822461BCE000F0E3A6 /* HandTests.swift */; };
+		028E10862461C4E400F0E3A6 /* PreFlopStrategyServiceVeryStrongHandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E10852461C4E400F0E3A6 /* PreFlopStrategyServiceVeryStrongHandTests.swift */; };
+		028E10882461FDB900F0E3A6 /* PreFlopStrategyServiceStrongHandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E10872461FDB900F0E3A6 /* PreFlopStrategyServiceStrongHandTests.swift */; };
 		07A6643C9C0C2076EB4F6F48 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D9D50AA383B0A2F770C27E /* SettingsPresenter.swift */; };
 		0BEA92CC5441C2242D9E15EB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE664AF2696BB330EB55611 /* SettingsViewController.swift */; };
 		1275FAFC88AD4CEFA958315C /* TabBarRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E17CD8341EBB5F4381B48 /* TabBarRouterProtocol.swift */; };
@@ -121,6 +132,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02331279246046DB00A27971 /* PreFlopStrategyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopStrategyService.swift; sourceTree = "<group>"; };
+		0233127B2460472400A27971 /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
+		0233127D246047A400A27971 /* PositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionType.swift; sourceTree = "<group>"; };
+		023312822460B27300A27971 /* PreFlopHandType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopHandType.swift; sourceTree = "<group>"; };
+		023312842460C20400A27971 /* PreFlopHandRecognizeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopHandRecognizeService.swift; sourceTree = "<group>"; };
+		0233128A2460C74300A27971 /* PreFlopHandRecognizeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopHandRecognizeServiceProtocol.swift; sourceTree = "<group>"; };
 		0244929ADE81D99E9EE7D0AF /* SessionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		024A43E0245D712D00282C1F /* PokerMentor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerMentor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		024A43E3245D712D00282C1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +169,11 @@
 		024A4458245F35E100282C1F /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		024A445B245F3C4200282C1F /* UICollectionViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		024A445E245F3DFD00282C1F /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		028E107D2461771000F0E3A6 /* PreFlopStrategyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopStrategyServiceTests.swift; sourceTree = "<group>"; };
+		028E107F2461772D00F0E3A6 /* PreFlopHandRecognizeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopHandRecognizeServiceTests.swift; sourceTree = "<group>"; };
+		028E10822461BCE000F0E3A6 /* HandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandTests.swift; sourceTree = "<group>"; };
+		028E10852461C4E400F0E3A6 /* PreFlopStrategyServiceVeryStrongHandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopStrategyServiceVeryStrongHandTests.swift; sourceTree = "<group>"; };
+		028E10872461FDB900F0E3A6 /* PreFlopStrategyServiceStrongHandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopStrategyServiceStrongHandTests.swift; sourceTree = "<group>"; };
 		088A627EA8289E8EC768A1D5 /* SettingsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
 		08CA811A44B12EAA0507A4C6 /* SettingsInteractorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsInteractorProtocol.swift; sourceTree = "<group>"; };
 		0ED34FD327AA04698580D185 /* PickCardPresenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickCardPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -240,12 +262,48 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		023312762460467100A27971 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				0233128E2460CA9500A27971 /* PreFlop */,
+				0233127B2460472400A27971 /* ActionType.swift */,
+				0233127D246047A400A27971 /* PositionType.swift */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		023312862460C3C700A27971 /* HandRecognizers */ = {
+			isa = PBXGroup;
+			children = (
+				023312872460C3D200A27971 /* PreFlop */,
+			);
+			path = HandRecognizers;
+			sourceTree = "<group>";
+		};
+		023312872460C3D200A27971 /* PreFlop */ = {
+			isa = PBXGroup;
+			children = (
+				023312822460B27300A27971 /* PreFlopHandType.swift */,
+				0233128A2460C74300A27971 /* PreFlopHandRecognizeServiceProtocol.swift */,
+				023312842460C20400A27971 /* PreFlopHandRecognizeService.swift */,
+			);
+			path = PreFlop;
+			sourceTree = "<group>";
+		};
+		0233128E2460CA9500A27971 /* PreFlop */ = {
+			isa = PBXGroup;
+			children = (
+				02331279246046DB00A27971 /* PreFlopStrategyService.swift */,
+			);
+			path = PreFlop;
+			sourceTree = "<group>";
+		};
 		024A43D7245D712D00282C1F = {
 			isa = PBXGroup;
 			children = (
 				024A43E2245D712D00282C1F /* PokerMentor */,
-				024A43FC245D712F00282C1F /* PokerMentorTests */,
 				024A4422245EC65E00282C1F /* PokerMentorKit */,
+				024A43FC245D712F00282C1F /* PokerMentorTests */,
 				024A442F245EC65E00282C1F /* PokerMentorKitTests */,
 				024A43E1245D712D00282C1F /* Products */,
 				024A4409245D748D00282C1F /* PureLayout.framework */,
@@ -325,6 +383,8 @@
 		024A4422245EC65E00282C1F /* PokerMentorKit */ = {
 			isa = PBXGroup;
 			children = (
+				023312862460C3C700A27971 /* HandRecognizers */,
+				023312762460467100A27971 /* Strategy */,
 				024A4451245EF44A00282C1F /* DeckProvider */,
 				024A443F245EC67F00282C1F /* Models */,
 				024A4423245EC65E00282C1F /* PokerMentorKit.h */,
@@ -336,6 +396,7 @@
 		024A442F245EC65E00282C1F /* PokerMentorKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				028E10812461773600F0E3A6 /* PreFlopStrategy */,
 				024A4432245EC65E00282C1F /* Info.plist */,
 			);
 			path = PokerMentorKitTests;
@@ -384,6 +445,18 @@
 				024A445E245F3DFD00282C1F /* CardView.swift */,
 			);
 			path = CardView;
+			sourceTree = "<group>";
+		};
+		028E10812461773600F0E3A6 /* PreFlopStrategy */ = {
+			isa = PBXGroup;
+			children = (
+				028E10822461BCE000F0E3A6 /* HandTests.swift */,
+				028E107F2461772D00F0E3A6 /* PreFlopHandRecognizeServiceTests.swift */,
+				028E107D2461771000F0E3A6 /* PreFlopStrategyServiceTests.swift */,
+				028E10852461C4E400F0E3A6 /* PreFlopStrategyServiceVeryStrongHandTests.swift */,
+				028E10872461FDB900F0E3A6 /* PreFlopStrategyServiceStrongHandTests.swift */,
+			);
+			path = PreFlopStrategy;
 			sourceTree = "<group>";
 		};
 		073CF0521B236FCFAEFFF853 /* Interactor */ = {
@@ -887,10 +960,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0233127E246047A400A27971 /* PositionType.swift in Sources */,
 				024A4443245EC6C200282C1F /* SuitType.swift in Sources */,
+				023312832460B27300A27971 /* PreFlopHandType.swift in Sources */,
 				024A4441245EC68D00282C1F /* Card.swift in Sources */,
+				0233127A246046DB00A27971 /* PreFlopStrategyService.swift in Sources */,
 				024A4455245EF6C000282C1F /* DeckProviderProtocol.swift in Sources */,
 				024A4445245EC9D900282C1F /* RankType.swift in Sources */,
+				0233128B2460C74300A27971 /* PreFlopHandRecognizeServiceProtocol.swift in Sources */,
+				0233127C2460472400A27971 /* ActionType.swift in Sources */,
+				023312852460C20400A27971 /* PreFlopHandRecognizeService.swift in Sources */,
 				024A4453245EF45C00282C1F /* DeckProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -899,6 +978,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028E10832461BCE000F0E3A6 /* HandTests.swift in Sources */,
+				028E107E2461771000F0E3A6 /* PreFlopStrategyServiceTests.swift in Sources */,
+				028E10882461FDB900F0E3A6 /* PreFlopStrategyServiceStrongHandTests.swift in Sources */,
+				028E10802461772D00F0E3A6 /* PreFlopHandRecognizeServiceTests.swift in Sources */,
+				028E10862461C4E400F0E3A6 /* PreFlopStrategyServiceVeryStrongHandTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

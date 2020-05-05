@@ -9,7 +9,22 @@ import Foundation
 
 public enum SuitType {
 	case hearts
-	case spades
-	case clubs
 	case diamonds
+	case clubs
+	case spades
+}
+
+extension SuitType: CustomStringConvertible {
+	public var description: String {
+		switch self {
+		case .hearts:
+			return "♥"
+		case .diamonds:
+			return "♦"
+		case .clubs:
+			return "♣"
+		case .spades:
+			return "♠"
+		}
+	}
 }

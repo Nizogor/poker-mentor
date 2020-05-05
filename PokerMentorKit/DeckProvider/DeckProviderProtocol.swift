@@ -6,8 +6,9 @@
 //
 
 public protocol DeckProviderProtocol: class {
-	func fullDeck() -> [Card]
+	var fullDeck: [Card] { get }
+	var allSuits: [SuitType] { get }
+	var allRanks: [RankType] { get }
+
 	func allCards(with suit: SuitType) -> [Card]
-	func allSuits() -> [SuitType]
-	func allRanks() -> [RankType]
 }

@@ -25,10 +25,9 @@ class PickCardPresenter {
     private let interactor: PickCardInteractorProtocol
     private let router: PickCardRouterProtocol
 
+	private let deckProvider: DeckProviderProtocol
 	private let phase: PickCardPhase
-	
-	private let allSuits: [SuitType]
-	private let fullDeck: [Card]
+
 	private let pickedCards: [Card]
 
 	private let presentedPickedCards: [PresentedCard]
@@ -44,14 +43,13 @@ class PickCardPresenter {
 		self.interactor = interactor
 		self.router = router
 
+		self.deckProvider = deckProvider
 		self.phase = phase
 		self.pickedCards = pickedCards
 
 		presentedPickedCards = pickedCards.map { PresentedCard(suit: $0.suit, rank: $0.rank) }
 
 		let placeholder = PresentedCard(suit: nil, rank: nil)
-		allSuits = deckProvider.allSuits()
-		fullDeck = deckProvider.fullDeck()
 
 		switch phase {
 		case .preFlop:
@@ -95,9 +93,9 @@ extension PickCardPresenter: PickCardPresenterProtocol {
 		return presentedNewCards.map { presentedCard -> PresentedPickCardSection in
 			switch (presentedCard.suit, presentedCard.rank) {
 			case (.none, _):
-				return PresentedPickCardSection.suits(allSuits)
+				return PresentedPickCardSection.suits(deckProvider.allSuits)
 			case (.some(let suit), .none):
-				let sectionCards = fullDeck.filter { card -> Bool in
+				let sectionCards = deckProvider.fullDeck.filter { card -> Bool in
 					card.suit == suit && !presentedCards.contains { $0.suit == card.suit && $0.rank == card.rank }
 				}
 				.map { PresentedCard(suit: $0.suit, rank: $0.rank) }

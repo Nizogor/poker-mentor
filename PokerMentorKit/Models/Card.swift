@@ -11,3 +11,9 @@ public struct Card {
 	public let suit: SuitType
 	public let rank: RankType
 }
+
+extension Card: CustomStringConvertible {
+	public var description: String {
+		return "\(rank.description)\(suit.description)"
+	}
+}
