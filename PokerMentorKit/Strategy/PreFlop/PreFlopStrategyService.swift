@@ -28,22 +28,13 @@ class PreFlopStrategyService {
 		case .strong:
 			return actionForStrongHand(position: position, opponentActions: opponentsActions)
 		case .medium:
-			return actionForMediumHand(cards: cards, position: position, opponentActions: opponentsActions)
+			return actionForMediumHand(position: position, opponentActions: opponentsActions)
+		case .kingQueenSuited:
+			return actionForKingAndQueenSuitedHand(position: position, opponentActions: opponentsActions)
+		case .speculative:
+			return actionForSpeculativeHand(position: position, opponentActions: opponentsActions)
 		default:
 			fatalError()
-		}
-	}
-
-	func actionAfterFirstRound(cards: [Card], opponentsActions: [ActionType]) -> ActionType {
-		let handType = handRecognizer.handType(cards: cards)
-
-		switch handType {
-		case .veryStrong:
-			return .raise
-		case .strong:
-			return .call
-		default:
-			return .fold
 		}
 	}
 
@@ -68,42 +59,71 @@ class PreFlopStrategyService {
 
 	// MARK: Medium Hand
 
-	private func actionForMediumHand(cards: [Card],
-									 position: PositionType,
+	private func actionForMediumHand(position: PositionType,
 									 opponentActions: [ActionType]) -> ActionType {
 		let raises = opponentActions.filter { $0 == .raise }
 
-		let ranks = cards.map { $0.rank }
-		let suits = cards.map { $0.suit }
+		if raises.isEmpty && position != .early {
+			return .raise
+		} else if raises.count == 1 && position == .bigBlind {
+			return .call
+		} else {
+			return .fold
+		}
+	}
 
-		let isKingQueen = Set(ranks) == [.king, .queen]
-		let isSuited = Set(suits).count == 1
-		let isExeption = isKingQueen && isSuited
+	// MARK: King And Queen Suited Hand
 
-		let atLeastOneCall = opponentActions.contains(.call)
+	private func actionForKingAndQueenSuitedHand(position: PositionType,
+												 opponentActions: [ActionType]) -> ActionType {
+		let raises = opponentActions.filter { $0 == .raise }
+		let calls = opponentActions.filter { $0 == .call }
+
 		let oneRaise = raises.count == 1
 
-		switch position {
-		case .early:
-			if oneRaise && atLeastOneCall && isExeption {
-				return .call
-			} else {
-				return .fold
-			}
-		case .bigBlind:
-			if oneRaise {
-				return .call
-			} else {
-				return .raise
-			}
-		case .middle, .late, .smallBlind:
-			if oneRaise && atLeastOneCall && isExeption {
-				return .call
-			} else if oneRaise {
-				return .fold
-			} else {
-				return .raise
-			}
+		if raises.isEmpty && position != .early {
+			return .raise
+		} else if (oneRaise && position == .bigBlind) || (oneRaise && !calls.isEmpty) {
+			return .call
+		} else {
+			return .fold
+		}
+	}
+
+	// MARK: Speculative Hand
+
+	private func actionForSpeculativeHand(position: PositionType, opponentActions: [ActionType]) -> ActionType {
+		let actionsType = OpponentsActionsType(actions: opponentActions)
+
+		switch (actionsType, position) {
+		case (.allFold, .late), (.allFold, .smallBlind), (.allFold, .bigBlind):
+			return .raise
+		case (.oneCalls, .late), (.oneCalls, .smallBlind), (.twoOrMoreCall, .early), (.twoOrMoreCall, .middle),
+			 (.twoOrMoreCall, .late), (.twoOrMoreCall, .smallBlind), (.oneRaisesAndOtherFold, .bigBlind),
+			 (.oneRaisesAndAtLeastOneCalls, _):
+			return .call
+		case (.oneCalls, .bigBlind), (.twoOrMoreCall, .bigBlind):
+			return .check
+		default:
+			return .fold
+		}
+	}
+
+	// MARK: - After First Round
+
+	func actionAfterFirstRound(cards: [Card], opponentsActions: [ActionType]) -> ActionType {
+		let handType = handRecognizer.handType(cards: cards)
+		let raises = opponentsActions.filter { $0 == .raise }
+
+		switch handType {
+		case .veryStrong:
+			return .raise
+		case .strong:
+			return .call
+		case .medium, .kingQueenSuited, .speculative:
+			return raises.count > 1 ? .fold : .call
+		default:
+			return .fold
 		}
 	}
 }

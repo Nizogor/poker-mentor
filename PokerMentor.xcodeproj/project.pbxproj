@@ -42,9 +42,13 @@
 		024A445F245F3DFD00282C1F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024A445E245F3DFD00282C1F /* CardView.swift */; };
 		028E107E2461771000F0E3A6 /* PreFlopStrategyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E107D2461771000F0E3A6 /* PreFlopStrategyServiceTests.swift */; };
 		028E10802461772D00F0E3A6 /* PreFlopHandRecognizeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E107F2461772D00F0E3A6 /* PreFlopHandRecognizeServiceTests.swift */; };
-		028E10832461BCE000F0E3A6 /* HandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E10822461BCE000F0E3A6 /* HandTests.swift */; };
+		028E10832461BCE000F0E3A6 /* TestHandsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E10822461BCE000F0E3A6 /* TestHandsProvider.swift */; };
 		028E10862461C4E400F0E3A6 /* PreFlopStrategyServiceVeryStrongHandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E10852461C4E400F0E3A6 /* PreFlopStrategyServiceVeryStrongHandTests.swift */; };
 		028E10882461FDB900F0E3A6 /* PreFlopStrategyServiceStrongHandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E10872461FDB900F0E3A6 /* PreFlopStrategyServiceStrongHandTests.swift */; };
+		028E108A246219E200F0E3A6 /* PreFlopStrategyServiceMediumHandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E1089246219E200F0E3A6 /* PreFlopStrategyServiceMediumHandTests.swift */; };
+		028E108C24635D4700F0E3A6 /* PreFlopStrategyServiceKingAndQueenSuitedHandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E108B24635D4700F0E3A6 /* PreFlopStrategyServiceKingAndQueenSuitedHandTests.swift */; };
+		028E108F2463610700F0E3A6 /* PreFlopStrategyServiceSpeculativeHandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E108E2463610700F0E3A6 /* PreFlopStrategyServiceSpeculativeHandTests.swift */; };
+		028E10912463647200F0E3A6 /* OpponentsActionsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028E10902463647200F0E3A6 /* OpponentsActionsType.swift */; };
 		07A6643C9C0C2076EB4F6F48 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D9D50AA383B0A2F770C27E /* SettingsPresenter.swift */; };
 		0BEA92CC5441C2242D9E15EB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE664AF2696BB330EB55611 /* SettingsViewController.swift */; };
 		1275FAFC88AD4CEFA958315C /* TabBarRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E17CD8341EBB5F4381B48 /* TabBarRouterProtocol.swift */; };
@@ -171,9 +175,13 @@
 		024A445E245F3DFD00282C1F /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		028E107D2461771000F0E3A6 /* PreFlopStrategyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopStrategyServiceTests.swift; sourceTree = "<group>"; };
 		028E107F2461772D00F0E3A6 /* PreFlopHandRecognizeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopHandRecognizeServiceTests.swift; sourceTree = "<group>"; };
-		028E10822461BCE000F0E3A6 /* HandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandTests.swift; sourceTree = "<group>"; };
+		028E10822461BCE000F0E3A6 /* TestHandsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHandsProvider.swift; sourceTree = "<group>"; };
 		028E10852461C4E400F0E3A6 /* PreFlopStrategyServiceVeryStrongHandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopStrategyServiceVeryStrongHandTests.swift; sourceTree = "<group>"; };
 		028E10872461FDB900F0E3A6 /* PreFlopStrategyServiceStrongHandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopStrategyServiceStrongHandTests.swift; sourceTree = "<group>"; };
+		028E1089246219E200F0E3A6 /* PreFlopStrategyServiceMediumHandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopStrategyServiceMediumHandTests.swift; sourceTree = "<group>"; };
+		028E108B24635D4700F0E3A6 /* PreFlopStrategyServiceKingAndQueenSuitedHandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopStrategyServiceKingAndQueenSuitedHandTests.swift; sourceTree = "<group>"; };
+		028E108E2463610700F0E3A6 /* PreFlopStrategyServiceSpeculativeHandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreFlopStrategyServiceSpeculativeHandTests.swift; sourceTree = "<group>"; };
+		028E10902463647200F0E3A6 /* OpponentsActionsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentsActionsType.swift; sourceTree = "<group>"; };
 		088A627EA8289E8EC768A1D5 /* SettingsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
 		08CA811A44B12EAA0507A4C6 /* SettingsInteractorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsInteractorProtocol.swift; sourceTree = "<group>"; };
 		0ED34FD327AA04698580D185 /* PickCardPresenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickCardPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -268,6 +276,7 @@
 				0233128E2460CA9500A27971 /* PreFlop */,
 				0233127B2460472400A27971 /* ActionType.swift */,
 				0233127D246047A400A27971 /* PositionType.swift */,
+				028E10902463647200F0E3A6 /* OpponentsActionsType.swift */,
 			);
 			path = Strategy;
 			sourceTree = "<group>";
@@ -450,11 +459,14 @@
 		028E10812461773600F0E3A6 /* PreFlopStrategy */ = {
 			isa = PBXGroup;
 			children = (
-				028E10822461BCE000F0E3A6 /* HandTests.swift */,
+				028E10822461BCE000F0E3A6 /* TestHandsProvider.swift */,
 				028E107F2461772D00F0E3A6 /* PreFlopHandRecognizeServiceTests.swift */,
 				028E107D2461771000F0E3A6 /* PreFlopStrategyServiceTests.swift */,
 				028E10852461C4E400F0E3A6 /* PreFlopStrategyServiceVeryStrongHandTests.swift */,
 				028E10872461FDB900F0E3A6 /* PreFlopStrategyServiceStrongHandTests.swift */,
+				028E1089246219E200F0E3A6 /* PreFlopStrategyServiceMediumHandTests.swift */,
+				028E108B24635D4700F0E3A6 /* PreFlopStrategyServiceKingAndQueenSuitedHandTests.swift */,
+				028E108E2463610700F0E3A6 /* PreFlopStrategyServiceSpeculativeHandTests.swift */,
 			);
 			path = PreFlopStrategy;
 			sourceTree = "<group>";
@@ -962,6 +974,7 @@
 			files = (
 				0233127E246047A400A27971 /* PositionType.swift in Sources */,
 				024A4443245EC6C200282C1F /* SuitType.swift in Sources */,
+				028E10912463647200F0E3A6 /* OpponentsActionsType.swift in Sources */,
 				023312832460B27300A27971 /* PreFlopHandType.swift in Sources */,
 				024A4441245EC68D00282C1F /* Card.swift in Sources */,
 				0233127A246046DB00A27971 /* PreFlopStrategyService.swift in Sources */,
@@ -978,11 +991,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				028E10832461BCE000F0E3A6 /* HandTests.swift in Sources */,
+				028E10832461BCE000F0E3A6 /* TestHandsProvider.swift in Sources */,
 				028E107E2461771000F0E3A6 /* PreFlopStrategyServiceTests.swift in Sources */,
+				028E108F2463610700F0E3A6 /* PreFlopStrategyServiceSpeculativeHandTests.swift in Sources */,
 				028E10882461FDB900F0E3A6 /* PreFlopStrategyServiceStrongHandTests.swift in Sources */,
+				028E108C24635D4700F0E3A6 /* PreFlopStrategyServiceKingAndQueenSuitedHandTests.swift in Sources */,
 				028E10802461772D00F0E3A6 /* PreFlopHandRecognizeServiceTests.swift in Sources */,
 				028E10862461C4E400F0E3A6 /* PreFlopStrategyServiceVeryStrongHandTests.swift in Sources */,
+				028E108A246219E200F0E3A6 /* PreFlopStrategyServiceMediumHandTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

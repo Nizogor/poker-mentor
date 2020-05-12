@@ -8,5 +8,6 @@
 public enum ActionType {
 	case raise
 	case call
+	case check
 	case fold
 }

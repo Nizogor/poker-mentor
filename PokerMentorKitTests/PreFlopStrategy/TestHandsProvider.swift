@@ -1,5 +1,5 @@
 //
-//  HandTests.swift
+//  TestHandsProvider.swift
 //  PokerMentorKitTests
 //
 //  Created by Nikita Teplyakov on 05.05.2020.
@@ -39,9 +39,15 @@ class TestHandsProvider {
 	func allMediumHands() -> [[Card]] {
 		let allSuitedAT = allSuitedHands(from: [.ace, .ten])
 		let allUnsuitedAT = allUnsuitedHands(from: [.ace, .ten])
+		let allUnsuitedKQ = allUnsuitedHands(from: [.king, .queen])
 		let allUnsuitedAJ = allUnsuitedHands(from: [.ace, .jack])
 
-		return allSuitedAT + allUnsuitedAT + allUnsuitedAJ
+		return allSuitedAT + allUnsuitedKQ + allUnsuitedAT + allUnsuitedAJ
+	}
+
+	/// KQs
+	func allKingAndQueenSuitedHands() -> [[Card]] {
+		return allSuitedHands(from: [.king, .queen])
 	}
 
 	/// 88, 77, 66, 55, 44, 33, 22, KJs, KTs, QJs, QTs, JTs, T9s

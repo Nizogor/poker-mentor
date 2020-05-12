@@ -9,6 +9,7 @@ enum PreFlopHandType {
 	case veryStrong
 	case strong
 	case medium
+	case kingQueenSuited
 	case speculative
 	case mixed
 	case other

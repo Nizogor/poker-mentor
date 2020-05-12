@@ -11,7 +11,7 @@ import XCTest
 class PreFlopHandRecognizeServiceTests: XCTestCase {
 
 	let sut = PreFlopHandRecognizeService()
-	lazy var testHandsProvoder = TestHandsProvider(deckProvider: DeckProvider())
+	lazy var testHandsProvider = TestHandsProvider(deckProvider: DeckProvider())
 
 	override class func setUp() {
 		super.setUp()
@@ -22,31 +22,36 @@ class PreFlopHandRecognizeServiceTests: XCTestCase {
 	}
 
 	func testHands() {
-		let veryStrongHands = testHandsProvoder.allVeryStrongHands()
-		let strongHands = testHandsProvoder.allStrongHands()
-		let mediumHands = testHandsProvoder.allMediumHands()
-		let speculativeHands = testHandsProvoder.allSpeculativeHands()
-		let mixedHands = testHandsProvoder.allMixedHands()
+		let veryStrongHands = testHandsProvider.allVeryStrongHands()
+		let strongHands = testHandsProvider.allStrongHands()
+		let mediumHands = testHandsProvider.allMediumHands()
+		let kingQueenSuitedHands = testHandsProvider.allKingAndQueenSuitedHands()
+		let speculativeHands = testHandsProvider.allSpeculativeHands()
+		let mixedHands = testHandsProvider.allMixedHands()
 		
 		veryStrongHands.forEach { testHand(actualType: .veryStrong, cards: $0) }
 		strongHands.forEach { testHand(actualType: .strong, cards: $0) }
 		mediumHands.forEach { testHand(actualType: .medium, cards: $0) }
+		kingQueenSuitedHands.forEach { testHand(actualType: .kingQueenSuited, cards: $0) }
 		speculativeHands.forEach { testHand(actualType: .speculative, cards: $0) }
 		mixedHands.forEach { testHand(actualType: .mixed, cards: $0) }
 
-		[strongHands, mediumHands, speculativeHands, mixedHands].flatMap { $0 }
+		[strongHands, mediumHands, kingQueenSuitedHands, speculativeHands, mixedHands].flatMap { $0 }
 			.forEach { testHand(fakeType: .veryStrong, cards: $0) }
 
-		[veryStrongHands, mediumHands, speculativeHands, mixedHands].flatMap { $0 }
+		[veryStrongHands, mediumHands, kingQueenSuitedHands, speculativeHands, mixedHands].flatMap { $0 }
 			.forEach { testHand(fakeType: .strong, cards: $0) }
 
-		[veryStrongHands, strongHands, speculativeHands, mixedHands].flatMap { $0 }
+		[veryStrongHands, strongHands, kingQueenSuitedHands, speculativeHands, mixedHands].flatMap { $0 }
 			.forEach { testHand(fakeType: .medium, cards: $0) }
 
-		[veryStrongHands, strongHands, mediumHands, mixedHands].flatMap { $0 }
+		[veryStrongHands, strongHands, mediumHands, speculativeHands, mixedHands].flatMap { $0 }
+		.forEach { testHand(fakeType: .kingQueenSuited, cards: $0) }
+
+		[veryStrongHands, strongHands, mediumHands, kingQueenSuitedHands, mixedHands].flatMap { $0 }
 			.forEach { testHand(fakeType: .speculative, cards: $0) }
 
-		[veryStrongHands, strongHands, mediumHands, speculativeHands].flatMap { $0 }
+		[veryStrongHands, strongHands, mediumHands, kingQueenSuitedHands, speculativeHands].flatMap { $0 }
 			.forEach { testHand(fakeType: .mixed, cards: $0) }
 	}
 

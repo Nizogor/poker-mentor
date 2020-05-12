@@ -16,11 +16,14 @@ class PreFlopHandRecognizeService {
 	/// AJs
 	let strongSuitedHand: Set<RankType> = [.ace, .jack]
 
-	/// AT, KQ
-	let mediumHands: Set<Set<RankType>> = [[.ace, .ten], [.king, .queen]]
+	/// AT
+	let mediumHand: Set<RankType> = [.ace, .ten]
 
-	/// AJo
-	let meduimUnsuitedHand: Set<RankType> = [.ace, .jack]
+	/// AJo, KQo
+	let meduimUnsuitedHands: Set<Set<RankType>> = [[.ace, .jack], [.king, .queen]]
+
+	/// KQs
+	let kingQueenSuitedHand: Set<RankType> = [.king, .queen]
 
 	/// 88, 77, 66, 55, 44, 33, 22
 	let speculativeHands: Set<Set<RankType>> = [[.eight, .eight], [.seven, .seven], [.six, .six], [.five, .five],
@@ -52,8 +55,10 @@ extension PreFlopHandRecognizeService: PreFlopHandRecognizeServiceProtocol {
 			return .veryStrong
 		} else if strongHands.contains(set) || (isSuited && strongSuitedHand == set) {
 			return .strong
-		} else if mediumHands.contains(set) || (!isSuited && meduimUnsuitedHand == set) {
+		} else if mediumHand == set || (!isSuited && meduimUnsuitedHands.contains(set)) {
 			return .medium
+		} else if isSuited && kingQueenSuitedHand == set {
+			return .kingQueenSuited
 		} else if speculativeHands.contains(set) || (isSuited && speculativeSuitedHands.contains(set)) {
 			return .speculative
 		} else if (isSuited && mixedSuitedHands.contains(set)) || (!isSuited && mixedUnsuitedHands.contains(set)) {
